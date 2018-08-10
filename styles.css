@@ -1,0 +1,145 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background: white;
+    width: 100%;
+    height: 90px;
+}
+
+header a:hover {
+    color: #0090d9;
+}
+
+.logo{
+    margin-left: 20px;
+    /* width: 140px; */
+    color: #0090d9;
+}
+
+.header-btn {
+    font-size: .8rem;
+    width: 130px;
+    margin-right: 20px;
+    border-radius: 3px;
+    padding: 12px;
+    transition: background .5s;
+}
+
+.header-btn:hover {
+    background: #29b2f7;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+header a.drop-down::after {
+    /* display: flex; */
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #0090da;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 7px;
+}
+
+button {
+    background: #0090d9;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+    min-width: 70px;
+    font-size: .8rem;
+    font-weight: 100;
+    padding: 40px 10px;
+}
+
+/* hide submenus by setting the max-height to 0 */
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .75s ease;
+}
+
+/* set max-height to an approximate height it could have */
+ul li:hover .submenu {
+    max-height: 500px;
+}
+
+.reveal {
+    max-height: 500px;
+}
+
+ul.submenu {
+    background: #eee;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 92px;
+    width: 150px;
+}
+
+ul.submenu li, ul.submenu li a {
+    margin: 0;
+    padding: 10px;
+    transition: all .2s;
+}
+
+ul.submenu li:first-child {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: .8rem;
+    text-align: center;
+    color: rgb(125, 125, 125);
+    padding: 10px 5px;
+    border-bottom: 1px solid rgb(203, 203, 203);
+    border-top: 5px solid #0090da;
+}
+ul.submenu li a:focus {
+    color: #0090da;
+}
+
+.content {
+    /* font-size: 1.5rem; */
+    font-weight: 500;
+    margin: 40px 0;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1533806481099-93f1242aea1e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0f2ba53e0ed1f9ecd16acb04ad0f70f7&auto=format&fit=crop&w=1050&q=80');
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
